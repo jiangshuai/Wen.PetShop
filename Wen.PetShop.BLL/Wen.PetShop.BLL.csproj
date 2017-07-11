@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>7100040d-d571-44e7-90d3-b413e5c1fbb1</ProjectGuid>
+    <ProjectGuid>{7100040D-D571-44E7-90D3-B413E5C1FBB1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Wen.PetShop.BLL</RootNamespace>
@@ -30,24 +30,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wen.PetShop.DALFactory\Wen.PetShop.DALFactory.csproj">
+      <Project>{93fea277-33e5-4f72-bc9a-4897304c0beb}</Project>
+      <Name>Wen.PetShop.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.IBLLStrategy\Wen.PetShop.IBLLStrategy.csproj">
+      <Project>{16354149-967b-47d6-9182-c75e56a4102e}</Project>
+      <Name>Wen.PetShop.IBLLStrategy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.IDAL\Wen.PetShop.IDAL.csproj">
+      <Project>{c205545d-c997-44d4-9a45-b97dd9836912}</Project>
+      <Name>Wen.PetShop.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.IMessaging\Wen.PetShop.IMessaging.csproj">
+      <Project>{da10f29b-3700-499e-9854-f1d187a4cd14}</Project>
+      <Name>Wen.PetShop.IMessaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.MessagingFactory\Wen.PetShop.MessagingFactory.csproj">
+      <Project>{65ab108e-7392-4333-9da6-5cdb80f41c5c}</Project>
+      <Name>Wen.PetShop.MessagingFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.Model\Wen.PetShop.Model.csproj">
+      <Project>{a34e430c-d7ff-42eb-8795-fb5ad18aab61}</Project>
+      <Name>Wen.PetShop.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

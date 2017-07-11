@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>a8b4563a-8d6c-4317-b39b-cfdcbe1aa92e</ProjectGuid>
+    <ProjectGuid>{A8B4563A-8D6C-4317-B39B-CFDCBE1AA92E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Wen.PetShop.OrderProcessor</RootNamespace>
@@ -30,24 +30,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wen.PetShop.BLL\Wen.PetShop.BLL.csproj">
+      <Project>{7100040d-d571-44e7-90d3-b413e5c1fbb1}</Project>
+      <Name>Wen.PetShop.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.IDAL\Wen.PetShop.IDAL.csproj">
+      <Project>{c205545d-c997-44d4-9a45-b97dd9836912}</Project>
+      <Name>Wen.PetShop.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.Model\Wen.PetShop.Model.csproj">
+      <Project>{a34e430c-d7ff-42eb-8795-fb5ad18aab61}</Project>
+      <Name>Wen.PetShop.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.MSMQMessaging\Wen.PetShop.MSMQMessaging.csproj">
+      <Project>{9c1c5540-9b47-4b43-a0df-9d55bf554ac6}</Project>
+      <Name>Wen.PetShop.MSMQMessaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.OracleDAL\Wen.PetShop.OracleDAL.csproj">
+      <Project>{6c6d513c-a334-4eac-87e6-5cf6ca5c21c3}</Project>
+      <Name>Wen.PetShop.OracleDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wen.PetShop.SQLServerDAL\Wen.PetShop.SQLServerDAL.csproj">
+      <Project>{97f811b6-acb5-4d4c-adfe-f9ec3c3a4060}</Project>
+      <Name>Wen.PetShop.SQLServerDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
